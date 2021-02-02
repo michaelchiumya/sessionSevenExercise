@@ -1,12 +1,29 @@
-//Using Recursion to calcu;ate a Fibonacci Sequence
+//Using Recursion to calculate a Fibonacci Sequence
+
+import java.util.Scanner;
 
 public class FibonacciCalculator{
 
     public static void main(String args[]) {
-        int endNumber = 20;
+
+
+
+
+        System.out.print("enter end number......" + "\n");
+
+        //scanner object to get user input
+        Scanner scan =  new Scanner(System.in);
+
+        //set variable endUser to user input value
+        int endNumber = scan.nextInt();
 
         System.out.print("Fibonacci Series of "+endNumber+" numbers: ");
-        for(int i = 0; i < endNumber; i++){
+
+        /*multiply endNumber by 2 on the loop to go beyond end number
+        * or we can set i < 22 if we want to get sequence up to 22 numbers
+        **/
+        for(int i = 0; i < endNumber*2; i++){
+
             System.out.print(recursiveFibonacci(i) +" ");
         }
     }
