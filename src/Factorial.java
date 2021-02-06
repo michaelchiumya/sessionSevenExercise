@@ -31,14 +31,19 @@ public class Factorial {
         return n * factorialUsingRecursion(n - 1);
     }
 
+  //alternative factorial method using iteration
     public static long factorialUsingIterative(int n) {
-            //set variable to return 1 if n is equal 1
+
+            //set variable to equal 1
             int  result = 1;
+
             //loop n times and minus one from n each time
             for(int i = 0; i < n; n--){
+
                 //multiply result by n to get value of result
                 result *= n;
             }
+            //return result
             return result;
         }
 

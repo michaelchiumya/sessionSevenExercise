@@ -3,6 +3,7 @@
  * @author seank This Java application allows the experimentation with the Java
  * Fork Join Framework
  */
+
 import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveAction;
@@ -26,7 +27,6 @@ public class ForkJoinTester {
         }
 
         System.setProperty(systemProperty, "2");
-
         for (int executeEvent = 0; executeEvent < 10; executeEvent++) {
             System.out.printf("\nComparison Event %d\n", executeEvent + 1);
             arraySumSequential(testArray);
@@ -42,7 +42,6 @@ public class ForkJoinTester {
         for (int i = 0; i < arr.length; i++) {
             arraySum += 1 / arr[i];
         }
-
         long nanoRunTime = System.nanoTime() - startPoint;
         printOutcome("SEQUENTIAL        ", nanoRunTime, arraySum);
         return arraySum;
@@ -59,8 +58,9 @@ public class ForkJoinTester {
         return sumFromArraySum;
     }
 
-    private static class ArraySum extends RecursiveAction {
 
+
+    private static class ArraySum extends RecursiveAction {
         static int THRESHOLD_SEQUENTIAL = 10;
         int high;
         int low;
